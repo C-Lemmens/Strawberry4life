@@ -1,0 +1,22 @@
+stages:
+  - build
+  - test
+
+build-code-job:
+  stage: build
+  script:
+    - echo "Check the {insert program} version, then build some {insert program} project files:"
+    - {insert program} -v
+    - {insert program execute command}
+
+test-code-job1:
+  stage: test
+  script:
+    - echo "If the files are built successfully, test some files with one command:"
+    - {insert program execute command} test1
+
+test-code-job2:
+  stage: test
+  script:
+    - echo "If the files are built successfully, test other files with a different command:"
+    - {insert program execute command} test2
